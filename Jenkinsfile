@@ -16,7 +16,7 @@ pipeline {
                 script {
                     app = docker.build("kirincastle/train-schedule")
                     app.inside {
-                        sh 'echo $(curl -4 ifconfig.io)'
+                        sh 'echo $(curl localhost:8080)'
                     }
                 }
             }
